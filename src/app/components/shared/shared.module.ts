@@ -9,6 +9,7 @@ import { DataCardComponent } from './/data-card/data-card.component';
   declarations: [TabsComponent, DataCardComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [TabsComponent, DataCardComponent]
 })
 export class SharedModule { }

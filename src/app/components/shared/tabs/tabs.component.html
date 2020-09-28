@@ -1,1 +1,6 @@
-<p>tab-view works!</p>
+<ng-container *ngFor="let template of templates">
+  <span class="tab-label" (click)="selectTemplate(template.templateRef)">
+    {{ template.markerName }}
+  </span>
+</ng-container>
+<ng-container *ngTemplateOutlet="selectedTemplate"></ng-container>

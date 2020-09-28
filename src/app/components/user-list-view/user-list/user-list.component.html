@@ -1,1 +1,7 @@
-<p>user-list works!</p>
+<!--https://stackblitz.com/edit/wrap-projected-templates?file=src/app.ts-->
+<!--if i had time-->
+<ng-container *ngFor="let user of userList; trackBy: trackByFunction">
+  <app-data-card>
+    <app-user-details [userData]="user"> </app-user-details>
+  </app-data-card>
+</ng-container>

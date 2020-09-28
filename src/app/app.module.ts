@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CardModule } from './components/card/card.module';
-import { LayoutModule } from './components/layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -12,8 +10,7 @@ import { LayoutModule } from './components/layout/layout.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    LayoutModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
