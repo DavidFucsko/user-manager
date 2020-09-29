@@ -1,0 +1,27 @@
+body,
+input {
+    font-size: $normal-font;
+    letter-spacing: 0.1rem;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.tab-label {
+    font-size: $small-font;
+    text-transform: uppercase;
+    color: #929292
+}
+
+.form {
+    button {
+        font-size: $small-font;
+        letter-spacing: 0.1rem;
+        color: #929292
+    }
+
+    label,
+    input {
+        font-size: $small-font;
+        color: #929292
+    }
+
+}

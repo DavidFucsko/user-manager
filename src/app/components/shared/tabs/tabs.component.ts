@@ -27,4 +27,8 @@ export class TabsComponent implements OnInit, AfterContentInit {
     this.selectedTemplate = templateRef;
   }
 
+  isActive(selectedTemplate: TemplateRef<any>): boolean {
+    return selectedTemplate === this.selectedTemplate;
+  }
+
 }

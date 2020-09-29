@@ -1,6 +1,8 @@
-<ng-container *ngFor="let template of templates">
-  <span class="tab-label" (click)="selectTemplate(template.templateRef)">
+<ng-container *ngFor="let template of templates; let last = last">
+  <span class="tab-label" [ngClass]="{'tab-label--last': last, 'tab-label--active' : isActive(template.templateRef)}"
+    (click)="selectTemplate(template.templateRef)">
     {{ template.markerName }}
   </span>
 </ng-container>
+<br>
 <ng-container *ngTemplateOutlet="selectedTemplate"></ng-container>

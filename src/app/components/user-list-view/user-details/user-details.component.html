@@ -1,10 +1,120 @@
-<div>
-  <app-tabs>
-    <ng-template [appMarker]="'User Data'">
-      <h2>{{ userData.name }}</h2>
-    </ng-template>
-    <ng-template [appMarker]="'User Id'">
-      <p>{{ userData.id }}</p>
-    </ng-template>
-  </app-tabs>
+<div class="user-details">
+  <form [formGroup]="userForm" (ngSubmit)="modifyUser()" class="form">
+    <app-tabs>
+      <ng-template [appMarker]="'User Data'">
+        <label>
+          Name:
+          <input
+            type="text"
+            id="name"
+            formControlName="name">
+        </label>
+        <label>
+          User Name:
+          <input
+            type="text"
+            id="username"
+            formControlName="username">
+        </label>
+        <label>
+          Email:
+          <input
+            type="text"
+            id="email"
+            formControlName="email">
+        </label>
+      </ng-template>
+      <ng-template [appMarker]="'Address'">
+        <form [formGroupName]="'address'" class="form">
+          <label>
+            Street:
+            <input
+              type="text"
+              id="street"
+              formControlName="street">
+          </label>
+          <label>
+            Suite:
+            <input
+              type="text"
+              id="suite"
+              formControlName="suite">
+          </label>
+          <label>
+            City:
+            <input
+              type="text"
+              id="city"
+              formControlName="city">
+          </label>
+          <label>
+            Zip:
+            <input
+              type="text"
+              id="zipcode"
+              formControlName="zipcode">
+          </label>
+          <form [formGroupName]="'geo'" class="form">
+            <label>
+              Lat:
+              <input
+                type="text"
+                id="lat"
+                formControlName="lat">
+            </label>
+            <label>
+              Lng:
+              <input
+                type="text"
+                id="lng"
+                formControlName="lng">
+            </label>
+          </form>
+        </form>
+      </ng-template>
+      <ng-template [appMarker]="'Contact Information'">
+        <label>
+          Phone:
+          <input
+            type="text"
+            id="phone"
+            formControlName="phone">
+        </label>
+        <label>
+          Website:
+          <input
+            type="text"
+            id="website"
+            formControlName="website">
+        </label>
+      </ng-template>
+      <ng-template [appMarker]="'Company Information'">
+        <form [formGroupName]="'company'" class="form">
+          <label>
+            Name:
+            <input
+              type="text"
+              id="name"
+              formControlName="name">
+          </label>
+          <label>
+            Catch Phrase:
+            <input
+              type="text"
+              id="catchPhrase"
+              formControlName="catchPhrase">
+          </label>
+          <label>
+            Bs:
+            <input
+              type="text"
+              id="bs"
+              formControlName="bs">
+          </label>
+        </form>
+      </ng-template>
+    </app-tabs>
+    <button type="submit">Submit</button>
+    <button type="button" (click)="deleteUser()">Delete</button>
+  </form>
 </div>

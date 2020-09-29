@@ -5,6 +5,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserListViewRoutingModule } from './user-list-view-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { DirectivesModule } from 'src/app/directives/directives.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +15,8 @@ import { DirectivesModule } from 'src/app/directives/directives.module';
     CommonModule,
     UserListViewRoutingModule,
     SharedModule,
-    DirectivesModule
+    DirectivesModule,
+    ReactiveFormsModule
   ]
 })
 export class UserListViewModule { }

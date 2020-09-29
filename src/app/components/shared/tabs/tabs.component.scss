@@ -1,3 +1,13 @@
-.tab-label{
-    margin-left: 1rem;
+.tab-label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 1rem;
+    border-bottom: .1rem solid #929292;
+    margin-bottom: 1.5rem;
+
+    &:hover,
+    &.tab-label--active {
+        box-shadow: 0 4px 2px -2px #c3c3c3;
+        color: #03A9F4
+    }
 }
