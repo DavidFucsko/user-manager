@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChildren, TemplateRef, QueryList, AfterContentInit } from '@angular/core';
+import { Component, ContentChildren, TemplateRef, QueryList, AfterContentInit } from '@angular/core';
 import { MarkerDirective } from 'src/app/directives/marker.directive';
 
 @Component({
@@ -6,16 +6,13 @@ import { MarkerDirective } from 'src/app/directives/marker.directive';
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.scss']
 })
-export class TabsComponent implements OnInit, AfterContentInit {
+export class TabsComponent implements AfterContentInit {
 
   @ContentChildren(MarkerDirective) templates: QueryList<MarkerDirective>;
 
   selectedTemplate: TemplateRef<any>;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   ngAfterContentInit(): void {
     if (!!this.templates.length) {

@@ -20,19 +20,19 @@ export class UserListService {
   }
 
   createUser(userToCreate: User): Observable<{ result: string, user: User }> {
-    return this.httpClient.post<User>(environment.user_endpoint, JSON.stringify(userToCreate),
+    return this.httpClient.post<User>(environment.user_endpoint, userToCreate,
       {
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         }
       }).pipe(
-        map(result => ({ result: 'success', user: result })),
+        map(response => ({ result: 'success', user: response })),
         catchError((error: HttpErrorResponse) => of({ result: error.message, user: userToCreate }))
       );
   }
 
   modifyUser(userToModify: User): Observable<string> {
-    return this.httpClient.put<User>(`${environment.user_endpoint}/${userToModify.id}`, JSON.stringify(userToModify),
+    return this.httpClient.put<User>(`${environment.user_endpoint}/${userToModify.id}`, userToModify,
       {
         headers: {
           'Content-type': 'application/json; charset=UTF-8',

@@ -1,7 +1,7 @@
 <div class="user-details">
   <form [formGroup]="userForm" (ngSubmit)="modifyUser()" class="form">
     <app-tabs>
-      <ng-template [appMarker]="'User Data'">
+      <ng-template [appTabMarker]="'User Data'">
         <label>
           Name:
           <input
@@ -24,7 +24,7 @@
             formControlName="email">
         </label>
       </ng-template>
-      <ng-template [appMarker]="'Address'">
+      <ng-template [appTabMarker]="'Address'">
         <form [formGroupName]="'address'" class="form">
           <label>
             Street:
@@ -72,7 +72,7 @@
           </form>
         </form>
       </ng-template>
-      <ng-template [appMarker]="'Contact Information'">
+      <ng-template [appTabMarker]="'Contact Information'">
         <label>
           Phone:
           <input
@@ -88,7 +88,7 @@
             formControlName="website">
         </label>
       </ng-template>
-      <ng-template [appMarker]="'Company Information'">
+      <ng-template [appTabMarker]="'Company Information'">
         <form [formGroupName]="'company'" class="form">
           <label>
             Name:
@@ -114,7 +114,9 @@
         </form>
       </ng-template>
     </app-tabs>
-    <button type="submit">Submit</button>
-    <button type="button" (click)="deleteUser()">Delete</button>
+    <div class="form-buttons">
+      <button type="submit">Submit</button>
+      <button type="button" (click)="deleteUser()">Delete</button>
+    </div>
   </form>
 </div>

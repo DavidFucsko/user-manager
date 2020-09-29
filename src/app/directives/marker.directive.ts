@@ -1,11 +1,11 @@
 import { Directive, Input, TemplateRef } from '@angular/core';
 
 @Directive({
-  selector: '[appMarker]'
+  selector: '[appTabMarker]'
 })
 export class MarkerDirective {
 
-  @Input('appMarker') markerName: string;
+  @Input('appTabMarker') markerName: string;
   constructor(public templateRef: TemplateRef<any>) { }
 
 }

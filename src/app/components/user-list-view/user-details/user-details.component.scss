@@ -1,7 +1,8 @@
 input {
-    display: inline;
+    display: block;
     border: none;
     border-bottom: 1px solid #929292;
+    width: 50%;
 }
 
 .user-details {
@@ -9,4 +10,8 @@ input {
         display: block;
         margin-bottom: 2rem;
     }
+}
+
+.form-buttons {
+    text-align: end;
 }

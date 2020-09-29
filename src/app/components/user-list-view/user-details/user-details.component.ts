@@ -26,8 +26,12 @@ export class UserDetailsComponent implements OnInit {
     this.initForm();
   }
 
-  public modifyUser(): void {
+  modifyUser(): void {
     this.userModified.emit(this.getModifiedUser());
+  }
+
+  deleteUser(): void {
+    this.userDeleted.emit(this.userData.id);
   }
 
   private initForm(): void {
@@ -59,7 +63,4 @@ export class UserDetailsComponent implements OnInit {
     return ({ ...this.userForm.value, ...{ id: this.userData.id } });
   }
 
-  deleteUser(): void {
-    this.userDeleted.emit(this.userData.id);
-  }
 }
