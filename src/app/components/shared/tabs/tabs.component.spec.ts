@@ -1,9 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DirectivesModule } from 'src/app/directives/directives.module';
 
 import { TabsComponent } from './tabs.component';
+import { DirectivesModule } from 'src/app/directives/directives.module';
 
 @Component({
   selector: 'app-test-cmp',

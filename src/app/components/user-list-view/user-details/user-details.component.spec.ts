@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+
 import { DirectivesModule } from 'src/app/directives/directives.module';
 import { User } from 'src/app/models/user.model';
-import { SharedModule } from '../../shared/shared.module';
-
 import { UserDetailsComponent } from './user-details.component';
+import { SharedModule } from '../../shared/shared.module';
 
 describe('UserDetailsComponent', () => {
   let component: UserDetailsComponent;

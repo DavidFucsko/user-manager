@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from 'src/app/models/user.model';
+
 import { UserListService } from 'src/app/services/user-list/user-list.service';
 
 @Component({
@@ -57,7 +59,6 @@ export class UserListComponent implements OnInit {
   }
 
   private createUser(user: User): void {
-
     this.userListService.createUser(user).subscribe((response: { result: string, user: User }) => {
       this.handleResponse(response.result, () => {
         // For demonstration purposes only!
