@@ -11,7 +11,7 @@ import { UserListService } from 'src/app/services/user-list/user-list.service';
 })
 export class UserListComponent implements OnInit {
 
-  public userList$: Observable<User[]>;
+  userList$: Observable<User[]>;
 
   constructor(private userListService: UserListService) { }
 
